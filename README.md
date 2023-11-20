@@ -1,28 +1,15 @@
-# Bomberman 
- 
-Bomberman clone written in python using pygame. 
- 
-![](images/bomberman.gif)
- 
-Game allow to play against two types of AI (Dijkstra Algorithm and Depth-first search) 
- 
-![](images/git1.png)
- 
-## Controls 
-Arrows - move 
+# BFI - BLAST FURY INFERNO 
 
-Space - plant bomb 
- 
-## Run 
-To run this game you need to install pygame and pygame-menu package
+![Bomberman Logo](link_to_your_image.png)
 
-Run using menu file:
+## Giới Thiệu
+BFI - BLAST FURY INFERNO là một trò chơi đơn giản xây dựng bằng thư viện Pygame. Trò chơi giữ lại cảm giác cổ điển của Bomberman với các yếu tố đặt bom, thu thập vật phẩm và chiến đấu với đối thủ.
+## Ý tưởng
 
-`` 
-python3 menu.py 
-`` 
- 
-For now game is not compatible with python2 
-## Sprite 
- 
-https://opengameart.org/content/bomb-party-the-complete-set 
+Xây dựng tựa game 2d quen thuộc với tuổi thơ của mỗi người với 4 nút di chuyển W A S D quen thuộc nút Space đặt bom và chiến đấu với máy
+
+### Thư viện sử dụng
+
+- Pygame
+
+
