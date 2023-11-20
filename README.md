@@ -1,6 +1,6 @@
 # BFI - BLAST FURY INFERNO 
 
-![Bomberman Logo](link_to_your_image.png)
+
 
 ## Giới Thiệu
 BFI - BLAST FURY INFERNO là một trò chơi đơn giản xây dựng bằng thư viện Pygame. Trò chơi giữ lại cảm giác cổ điển của Bomberman với các yếu tố đặt bom, thu thập vật phẩm và chiến đấu với đối thủ.
