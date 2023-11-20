@@ -85,13 +85,13 @@ def game_init(surface, path, player_alg, en1_alg, en2_alg, en3_alg, scale):
     else:
         player.life = False
 
-    grass_img = pygame.image.load('images/terrain/grass.png')
+    grass_img = pygame.image.load('images/terrain/grass2.png')
     grass_img = pygame.transform.scale(grass_img, (scale, scale))
 
-    block_img = pygame.image.load('images/terrain/block.png')
+    block_img = pygame.image.load('images/terrain/block1.png')
     block_img = pygame.transform.scale(block_img, (scale, scale))
 
-    box_img = pygame.image.load('images/terrain/box.png')
+    box_img = pygame.image.load('images/terrain/box1.png')
     box_img = pygame.transform.scale(box_img, (scale, scale))
 
     bomb1_img = pygame.image.load('images/bomb/1.png')
@@ -160,8 +160,17 @@ def draw(s, grid, tile_size, show_path, game_ended, terrain_images, bomb_images,
                                          [sek[0] * tile_size, sek[1] * tile_size, tile_size, tile_size], 1)
 
     if game_ended:
-        tf = font.render("Press ESC to go back to menu", False, (153, 153, 255))
-        s.blit(tf, (10, 10))
+
+        def main(s, tile_size, show_path, terrain_images, bomb_images, explosion_images, power_ups_images):
+            # Other code...
+
+            font = pygame.font.Font(None, 36)
+            text = font.render("Enter ESC to exit the game", True, (255, 0, 0))
+            text_rect = text.get_rect(center=(s.get_width() // 2, s.get_height() - 50))
+            s.blit(text, text_rect)
+
+            # Other code...
+       
 
     pygame.display.update()
 

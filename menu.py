@@ -3,8 +3,10 @@ import pygame_menu
 
 import game
 from enums.algorithm import Algorithm
+from music import play_music
+import random
 
-COLOR_BACKGROUND = (153, 153, 255)
+COLOR_BACKGROUND = (70, 247, 224)
 COLOR_BLACK = (0, 0, 0)
 COLOR_WHITE = (255, 255, 255)
 FPS = 60.0
@@ -25,6 +27,9 @@ en3_alg = Algorithm.DIJKSTRA
 show_path = True
 surface = pygame.display.set_mode(WINDOW_SIZE)
 
+options = ["ok0", "ok1", "ok2", "ok3"]
+selected_option = random.choice(options)
+play_music(f"musics/{selected_option}.wav")
 
 def change_path(value, c):
     global show_path
@@ -63,7 +68,7 @@ def main_background():
 def menu_loop():
     pygame.init()
 
-    pygame.display.set_caption('Bomberman')
+    pygame.display.set_caption('Game đặt bom vô tri')
     clock = pygame.time.Clock()
 
     menu_theme = pygame_menu.Theme(
@@ -76,9 +81,8 @@ def menu_loop():
         widget_font_size=int(TILE_SIZE*0.7),
         background_color=MENU_BACKGROUND_COLOR,
         title_background_color=MENU_TITLE_COLOR,
-
     )
-
+    
     play_menu = pygame_menu.Menu(
         theme=menu_theme,
         height=int(WINDOW_SIZE[1] * WINDOW_SCALE),
@@ -106,7 +110,7 @@ def menu_loop():
     play_menu.add.button('Start',
                          run_game)
 
-    play_menu.add.button('Options', play_options)
+    # play_menu.add.button('Options', play_options)
     play_menu.add.button('Return  to  main  menu', pygame_menu.events.BACK)
 
     about_menu_theme = pygame_menu.themes.Theme(
@@ -119,6 +123,7 @@ def menu_loop():
         widget_font_size=int(TILE_SIZE*0.5),
         background_color=MENU_BACKGROUND_COLOR,
         title_background_color=MENU_TITLE_COLOR
+        
     )
 
     about_menu = pygame_menu.Menu(
@@ -146,7 +151,7 @@ def menu_loop():
     )
 
     main_menu.add.button('Play', play_menu)
-    main_menu.add.button('About', about_menu)
+    # main_menu.add.button('About', about_menu)
     main_menu.add.button('Quit', pygame_menu.events.EXIT)
 
     running = True
