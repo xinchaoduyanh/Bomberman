@@ -161,15 +161,8 @@ def draw(s, grid, tile_size, show_path, game_ended, terrain_images, bomb_images,
 
     if game_ended:
 
-        def main(s, tile_size, show_path, terrain_images, bomb_images, explosion_images, power_ups_images):
-            # Other code...
-
-            font = pygame.font.Font(None, 36)
-            text = font.render("Enter ESC to exit the game", True, (255, 0, 0))
-            text_rect = text.get_rect(center=(s.get_width() // 2, s.get_height() - 50))
-            s.blit(text, text_rect)
-
-            # Other code...
+        tf = font.render("Press ESC to go back to menu", False, (0, 0, 0))
+        s.blit(tf, (20, 20))
        
 
     pygame.display.update()
